@@ -1,6 +1,7 @@
 package com.example.Bookstore.domain;
-
+//mod 1150
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -10,9 +11,9 @@ public class Book {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long id;
-	private String Title, Author;
-	private int Year;
-	private Double isbn, Price;
+	private String title, author;
+	private int year;
+	private Double isbn, price;
 	
 	
 	public Book() {
@@ -22,11 +23,11 @@ public class Book {
 	
 	public Book(String title, String author, int year, Double isbn, Double price) {
 		super();
-		Title = title;
-		Author = author;
-		Year = year;
+		this.title = title;
+		this.author = author;
+		this.year = year;
 		this.isbn = isbn;
-		Price = price;
+		this.price = price;
 	}
 	
 	
@@ -38,22 +39,22 @@ public class Book {
 		this.id = id;
 	}
 	public String getTitle() {
-		return Title;
+		return title;
 	}
 	public void setTitle(String title) {
-		Title = title;
+		this.title = title;
 	}
 	public String getAuthor() {
-		return Author;
+		return author;
 	}
 	public void setAuthor(String author) {
-		Author = author;
+		this.author = author;
 	}
 	public int getYear() {
-		return Year;
+		return year;
 	}
 	public void setYear(int year) {
-		Year = year;
+		this.year = year;
 	}
 	public Double getIsbn() {
 		return isbn;
@@ -62,12 +63,16 @@ public class Book {
 		this.isbn = isbn;
 	}
 	public Double getPrice() {
-		return Price;
+		return price;
 	}
 	public void setPrice(Double price) {
-		Price = price;
+		this.price = price;
 	}
 	
-	
+	@Override
+	public String toString() {
+		return "Book [id=" + id + ", Title=" + title + ", Author=" + author + ", Year=" + year +
+				", isbn=" + isbn + ", Price=" + price +"]";
+	}
 	
 }
