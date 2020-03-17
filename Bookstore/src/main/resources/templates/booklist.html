@@ -4,6 +4,7 @@
 <head>
 	<Title>Booklist</Title>
 	<meta http-equiv="content-type" content="text/html" charset="UTF-8">
+	
 </head>
 <body>
 	<h1>Books</h1>
@@ -16,6 +17,7 @@
 			<th>Year</th>
 			<th>isbn</th>
 			<th>Price</th>
+			<th>Category</th>
 		</tr>
 		
 		
@@ -25,6 +27,7 @@
 			<td th:text = "${book.year}"></td>
 			<td th:text = "${book.isbn}"></td>
 			<td th:text = "${book.price}"></td>
+			<td th:text="${book.category.name}"></td>
 			<td><a th:href="@{/delete/{id}(id=${book.id})}">Delete</a></td>
 			</tr>
 		
