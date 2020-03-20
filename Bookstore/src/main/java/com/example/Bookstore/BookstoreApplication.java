@@ -41,6 +41,18 @@ public class BookstoreApplication {
 					crepository.findByName("Farssi").get(0)));
 			brepository.save(new Book("Riffien kuningas", "Gerhard Rihmakallo", 2019, 1234.6, 22.50,
 					crepository.findByName("Komedia").get(0)));
+			brepository.save(new Book("Valintojen maailma", "Tom of Finland", 2002, 1674.6, 57.99,
+					crepository.findByName("Komedia").get(0)));
+			brepository.save(new Book("Selviytyjät", "Maxwell Gothenburg", 1992, 365.9, 6.50,
+					crepository.findByName("Kauhu").get(0)));
+			brepository.save(new Book("Kutuluola", "Pulkkinen", 1998, 1098.6, 18.50,
+					crepository.findByName("Komedia").get(0)));
+			brepository.save(new Book("Spirit of the new age", "Jussi Pattitussi", 1999, 1239.6, 21.50,
+					crepository.findByName("Komedia").get(0)));
+			brepository.save(new Book("Betoni", "Kalervo Jankko", 2015, 1354.6, 27.50,
+					crepository.findByName("Komedia").get(0)));
+			
+			
 			
 			log.info("fetch all books");
 			for (Book book : brepository.findAll()) {
